@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: cloudnativesampleapp-route
+spec:
+  host: cloudnativesampleapp-route-bootcamp-cicd-carlos.cpat-dev-bootcamp-ocp43-afb9c6047b062b44e3f1b3ecfeba4309-0000.us-south.containers.appdomain.cloud
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: cloudnativesampleapp-service
+    weight: 100
